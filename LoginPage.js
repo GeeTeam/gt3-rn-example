@@ -40,13 +40,6 @@ export default class RNPage extends Component<{}> {
   // 组件渲染后调用
   componentDidMount(){
 
-    // console.log('枚举常量:%d',loginViewController.secondaryCaptchaPolicyForbidden)
-    // gt3CaptchaManagerModule.shouldUseDefaultRegisterAPIEnabled(true)
-    // gt3CaptchaManagerModule.shouldUseDefaultSecondaryValidateEnabled(true)
-    // gt3CaptchaManagerModule.getCookieValue("cookieName",(error, events) => {
-    
-    // })
-
     //初始化GT3CaptchaManager
     gt3CaptchaManagerModule.initWithAPI('https://www.geetest.com/demo/gt/register-slide', 'https://www.geetest.com/demo/gt/validate-slide');
     gt3CaptchaManagerModule.gtViewWithTimeout(10000);
@@ -57,22 +50,6 @@ export default class RNPage extends Component<{}> {
     this.closeListener = gt3CaptchaManagerEmitter.addListener('userCloseCaptchaView',(dic)=>{
       console.log('登录界面||验证码视图关闭');
     });
-
-        //监听验证码成功回调
-    // this.secondaryListener = gt3CaptchaManagerEmitter.addListener('GT3DidReceiveSecondaryCaptchaDataEvent',(dic)=>{
-    //   console.log('登录界面||验证登录成功回调');
-    //   for(var key in dic){
-    //     console.log("key: " + key + " ,value: " + dic[key]);
-    //   }
-    // });
-
-    // // 监听验证失败的回调 
-    // this.failListener = gt3CaptchaManagerEmitter.addListener('GT3CaptchaErrorHandlerEvent',(dic)=>{
-    //   console.log('登录界面||验证结果发生错误');
-    //   for(var key in dic){
-    //      console.log("key: " + key + " ,value: " + dic[key]);
-    //   }
-    // });
 
   };
 
