@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+    //rootViewController是OC的，依赖注入方式加载JS
     NSURL *jsCodeLocation;
     jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
