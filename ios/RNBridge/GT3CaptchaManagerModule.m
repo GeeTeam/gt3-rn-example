@@ -7,7 +7,9 @@
 //
 
 #import "GT3CaptchaManagerModule.h"
-#import "GT3CaptchaManager.h"
+//#import "GT3CaptchaManager.h"
+#import <GT3Captcha/GT3Captcha.h>
+
 #import "GT3CaptchaManagerEmitter.h"
 #import "RCTConvert+GT3LanguageType.h"
 

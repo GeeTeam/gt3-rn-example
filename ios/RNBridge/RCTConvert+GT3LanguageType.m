@@ -7,7 +7,8 @@
 //
 
 #import "RCTConvert+GT3LanguageType.h"
-#import "GT3Utils.h"
+//#import "GT3Utils.h"
+#import <GT3Captcha/GT3Captcha.h>
 
 @implementation RCTConvert (GT3LanguageType)
 

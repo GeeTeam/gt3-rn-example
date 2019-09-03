@@ -7,7 +7,8 @@
 //
 
 #import <React/RCTConvert.h>
-#import "GT3Error.h"
+//#import "GT3Error.h"
+#import <GT3Captcha/GT3Captcha.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

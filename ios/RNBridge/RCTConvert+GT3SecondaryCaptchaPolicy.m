@@ -7,7 +7,9 @@
 //
 
 #import "RCTConvert+GT3SecondaryCaptchaPolicy.h"
-#import "GT3Utils.h"
+//#import "GT3Utils.h"
+#import <GT3Captcha/GT3Captcha.h>
+
 
 @implementation RCTConvert (GT3SecondaryCaptchaPolicy)
 

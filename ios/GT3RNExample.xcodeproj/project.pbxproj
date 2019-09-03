@@ -19,8 +19,8 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* GT3RNExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GT3RNExampleTests.m */; };
 		6C0EE873E99CCA8CDADFAABA /* libPods-GT3RNExample-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15335AE1375FEFB2C05CCD1E /* libPods-GT3RNExample-tvOSTests.a */; };
-		79E906AB231CF21200C463F4 /* libGT3Captcha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E90699231CF21200C463F4 /* libGT3Captcha.a */; };
-		79E906AC231CF21200C463F4 /* GT3Captcha.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79E9069A231CF21200C463F4 /* GT3Captcha.bundle */; };
+		79A051DD231E4E3B00D8F581 /* GT3Captcha.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79A051DA231E4E3B00D8F581 /* GT3Captcha.bundle */; };
+		79A051E0231E4E5000D8F581 /* GT3Captcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A051DF231E4E5000D8F581 /* GT3Captcha.framework */; };
 		79E906AD231CF21200C463F4 /* GT3CaptchaManagerEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E906A3231CF21200C463F4 /* GT3CaptchaManagerEmitter.m */; };
 		79E906AE231CF21200C463F4 /* RCTConvert+GT3LanguageType.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E906A4231CF21200C463F4 /* RCTConvert+GT3LanguageType.m */; };
 		79E906AF231CF21200C463F4 /* GT3CaptchaManagerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E906A5231CF21200C463F4 /* GT3CaptchaManagerModule.m */; };
@@ -64,13 +64,8 @@
 		2D02E4901E0B4A5D006451C7 /* GT3RNExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GT3RNExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A0E15340E6AF2402999A83 /* Pods-GT3RNExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GT3RNExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-GT3RNExampleTests/Pods-GT3RNExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C5A8C57D524CA0D1F0CA64D /* Pods-GT3RNExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GT3RNExample.release.xcconfig"; path = "Target Support Files/Pods-GT3RNExample/Pods-GT3RNExample.release.xcconfig"; sourceTree = "<group>"; };
-		79E90699231CF21200C463F4 /* libGT3Captcha.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGT3Captcha.a; sourceTree = "<group>"; };
-		79E9069A231CF21200C463F4 /* GT3Captcha.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GT3Captcha.bundle; sourceTree = "<group>"; };
-		79E9069D231CF21200C463F4 /* GT3Captcha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GT3Captcha.h; sourceTree = "<group>"; };
-		79E9069E231CF21200C463F4 /* GT3Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GT3Utils.h; sourceTree = "<group>"; };
-		79E9069F231CF21200C463F4 /* GT3CaptchaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GT3CaptchaManager.h; sourceTree = "<group>"; };
-		79E906A0231CF21200C463F4 /* GT3Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GT3Error.h; sourceTree = "<group>"; };
-		79E906A1231CF21200C463F4 /* GT3CaptchaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GT3CaptchaButton.h; sourceTree = "<group>"; };
+		79A051DA231E4E3B00D8F581 /* GT3Captcha.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GT3Captcha.bundle; sourceTree = "<group>"; };
+		79A051DF231E4E5000D8F581 /* GT3Captcha.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GT3Captcha.framework; sourceTree = "<group>"; };
 		79E906A3231CF21200C463F4 /* GT3CaptchaManagerEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GT3CaptchaManagerEmitter.m; sourceTree = "<group>"; };
 		79E906A4231CF21200C463F4 /* RCTConvert+GT3LanguageType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+GT3LanguageType.m"; sourceTree = "<group>"; };
 		79E906A5231CF21200C463F4 /* GT3CaptchaManagerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GT3CaptchaManagerModule.m; sourceTree = "<group>"; };
@@ -106,8 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A051E0231E4E5000D8F581 /* GT3Captcha.framework in Frameworks */,
 				1D870AA3E68E5E40A3B9C728 /* libPods-GT3RNExample.a in Frameworks */,
-				79E906AB231CF21200C463F4 /* libGT3Captcha.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,31 +191,10 @@
 		79E90698231CF21200C463F4 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				79E90699231CF21200C463F4 /* libGT3Captcha.a */,
-				79E9069A231CF21200C463F4 /* GT3Captcha.bundle */,
-				79E9069B231CF21200C463F4 /* include */,
+				79A051DF231E4E5000D8F581 /* GT3Captcha.framework */,
+				79A051DA231E4E3B00D8F581 /* GT3Captcha.bundle */,
 			);
 			path = SDK;
-			sourceTree = "<group>";
-		};
-		79E9069B231CF21200C463F4 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				79E9069C231CF21200C463F4 /* GT3Captcha */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		79E9069C231CF21200C463F4 /* GT3Captcha */ = {
-			isa = PBXGroup;
-			children = (
-				79E9069D231CF21200C463F4 /* GT3Captcha.h */,
-				79E9069E231CF21200C463F4 /* GT3Utils.h */,
-				79E9069F231CF21200C463F4 /* GT3CaptchaManager.h */,
-				79E906A0231CF21200C463F4 /* GT3Error.h */,
-				79E906A1231CF21200C463F4 /* GT3CaptchaButton.h */,
-			);
-			path = GT3Captcha;
 			sourceTree = "<group>";
 		};
 		79E906A2231CF21200C463F4 /* RNBridge */ = {
@@ -414,8 +388,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				79E906AC231CF21200C463F4 /* GT3Captcha.bundle in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				79A051DD231E4E3B00D8F581 /* GT3Captcha.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +686,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 2448B7W898;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK",
+				);
 				INFOPLIST_FILE = GT3RNExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -736,6 +714,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2448B7W898;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK",
+				);
 				INFOPLIST_FILE = GT3RNExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
