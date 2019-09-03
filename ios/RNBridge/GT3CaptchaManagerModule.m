@@ -50,7 +50,7 @@
     });
   }
 
-  RCT_EXPORT_METHOD(useGTViewWithTimeout:(NSTimeInterval)timeout) {
+  RCT_EXPORT_METHOD(gtViewWithTimeout:(NSTimeInterval)timeout) {
     dispatch_async(dispatch_get_main_queue(), ^{
       [self.manager useGTViewWithTimeout:timeout];
     });
