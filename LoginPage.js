@@ -12,17 +12,30 @@ import {
   StyleSheet,
   Text,
   View,
-  Touchableopacity,
   NativeEventEmitter,
-  NativeModules
+  NativeModules,
+  TouchableOpacity,
 } from 'react-native';
 
 
 var gt3CaptchaManagerModule =  require('react-native').NativeModules.GT3CaptchaManagerModule
 const gt3CaptchaManagerEmitter = new NativeEventEmitter(NativeModules.GT3CaptchaManagerEmitter)
 
+//验证码登录
+const onPressButton = () => {
+    gt3CaptchaManagerModule.startGTCaptcha().then((datas)=> {
+      console.log('data', datas);
+    }).catch((err)=> {
+      console.log('err', err);
+    });
+
+};
 
 export default class RNPage extends Component<{}> {
+
+  constructor(props) {
+        super(props);
+    }
 
   // 组件渲染后调用
   componentDidMount(){
@@ -35,7 +48,10 @@ export default class RNPage extends Component<{}> {
     // })
 
     //初始化GT3CaptchaManager
-    gt3CaptchaManagerModule.initWithAPI('http://www.geetest.com/demo/gt/register-slide', 'http://www.geetest.com/demo/gt/validate-slide')
+    gt3CaptchaManagerModule.initWithAPI('https://www.geetest.com/demo/gt/register-slide', 'https://www.geetest.com/demo/gt/validate-slide');
+    gt3CaptchaManagerModule.gtViewWithTimeout(10000);
+    gt3CaptchaManagerModule.disableBackgroundUserInteraction(true);
+    gt3CaptchaManagerModule.enableDebug(false);
 
     // 监听验证码界面回调
     this.closeListener = gt3CaptchaManagerEmitter.addListener('userCloseCaptchaView',(dic)=>{
@@ -61,49 +77,40 @@ export default class RNPage extends Component<{}> {
   };
 
   componentWillUnmount(){
+    gt3CaptchaManagerModule.closeSensebot();
     this.closeListener.remove();
     this.secondaryListener.remove();
     this.failListener.remove();
   };
 
-  //验证码登录  
-  login() {
-    // alert("准备登录")
-    // gt3CaptchaManagerModule.startGTCaptchaWithAnimated(true);
-    gt3CaptchaManagerModule.startGTCaptcha().then((datas)=> {
-      console.log('data', datas);
-    }).catch((err)=> {
-      console.log('err', err);
-    })
-  }
-
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.login} onPress={()=>this.login()}>
-          RN验证码登录
-        </Text>
-      </View>
+
+           <View style={styles.container}>
+                <Text style={styles.welcome}>
+                       Welcome to react-native-geetest!
+                </Text>
+                <TouchableOpacity onPress={onPressButton}>
+                    <View style={{borderWidth: 1, borderColor: '#CCCCCC', padding: 10}}>
+                          <Text>Trigger Sensebot</Text>
+                    </View>
+                </TouchableOpacity>
+           </View>
+
     );
   }
 }
  
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  login: {
-    width: 180,
-    fontSize: 22,
-    backgroundColor: '#33acdc',
-    textAlign: 'center',
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#39ffd6',
+    },
+    welcome: {
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
+    }
 });
