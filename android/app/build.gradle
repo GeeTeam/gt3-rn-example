@@ -150,6 +150,11 @@ android {
             keyPassword 'android'
         }
     }
+    repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -198,6 +203,8 @@ dependencies {
     } else {
       implementation jscFlavor
     }
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation(name: 'geetest_sensebot_android_v4.1.4_20190719', ext: 'aar')
 }
 
 // Run this once to be able to run the application with BUCK
